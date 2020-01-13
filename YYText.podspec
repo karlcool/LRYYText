@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'YYText'
+  s.name         = 'LRYYText'
   s.summary      = 'Powerful text framework for iOS to display and edit rich text.'
   s.version      = '1.0.7.1'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
