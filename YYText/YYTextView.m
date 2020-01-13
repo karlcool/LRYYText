@@ -840,7 +840,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
             dealLongPressAction = YES;
             CGRect rect = [_innerLayout rectForRange:[YYTextRange rangeWithRange:_highlightRange]];
             rect = [self _convertRectFromLayout:rect];
-            _highlight.longPressAction(self, _innerText, _highlightRange, rect, _highlight);
+            _highlight.longPressAction(self, _innerText, _highlightRange, rect);
             [self _endTouchTracking];
         } else {
             BOOL shouldHighlight = YES;
@@ -2682,7 +2682,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
                 if (_highlight.tapAction) {
                     CGRect rect = [_innerLayout rectForRange:[YYTextRange rangeWithRange:_highlightRange]];
                     rect = [self _convertRectFromLayout:rect];
-                    _highlight.tapAction(self, _innerText, _highlightRange, rect, _highlight);
+                    _highlight.tapAction(self, _innerText, _highlightRange, rect);
                 } else {
                     BOOL shouldTap = YES;
                     if ([self.delegate respondsToSelector:@selector(textView:shouldTapHighlight:inRange:)]) {
